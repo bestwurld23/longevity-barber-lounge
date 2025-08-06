@@ -35,44 +35,19 @@ class LongevityBarberApp {
     }
 
     setupEventListeners() {
-        // Language switcher
-        const langToggle = document.getElementById('langToggle');
-        const langDropdown = document.getElementById('langDropdown');
-        const langButtons = document.querySelectorAll('[data-lang]');
-
-        langToggle?.addEventListener('click', () => {
-            langDropdown.classList.toggle('active');
+        // Donate button
+        const donateBtn = document.getElementById('donateBtn');
+        donateBtn?.addEventListener('click', () => {
+            // Add donate functionality here
+            alert('Donate functionality to be implemented');
         });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!langToggle?.contains(e.target) && !langDropdown?.contains(e.target)) {
-                langDropdown?.classList.remove('active');
-            }
-        });
-
-        langButtons.forEach(button => {
-            button.addEventListener('click', async (e) => {
-                const lang = e.target.dataset.lang;
-                await this.i18n.setLanguage(lang);
-                langDropdown?.classList.remove('active');
-            });
-        });
-
-        // Booking buttons
-        const bookingButtons = document.querySelectorAll('#bookingBtn, #heroBookBtn');
-        bookingButtons.forEach(button => {
+        // Hero booking button
+        const heroBookBtn = document.getElementById('heroBookBtn');
+        heroBookBtn?.addEventListener('click', () => {
             button.addEventListener('click', () => {
                 this.bookingSystem.openModal();
             });
-        });
-
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        mobileToggle?.addEventListener('click', () => {
-            navMenu?.classList.toggle('active');
         });
     }
 
