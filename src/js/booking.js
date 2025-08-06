@@ -102,6 +102,7 @@ export class BookingSystem {
         
         // Clear existing options
         timeSelect.innerHTML = '<option value="" data-i18n="booking.selectTime">Select a time</option>';
+        timeSelect.innerHTML = '<option value="" data-i18n="selectTime">Select a time</option>';
 
         // Check if the day is closed
         if (this.businessHours[dayName]?.closed) {
