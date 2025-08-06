@@ -18,6 +18,9 @@ class LongevityBarberApp {
         // Initialize services
         await this.servicesManager.init();
         
+        // Initialize services
+        await this.servicesManager.init();
+        
         // Initialize booking system
         this.bookingSystem.init();
         
