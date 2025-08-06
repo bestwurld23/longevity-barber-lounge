@@ -70,9 +70,9 @@ export class I18n {
             'booking.success.title': 'Appointment Booked!',
             'booking.success.message': 'Your appointment has been successfully booked. You will receive a confirmation email shortly.',
             'booking.success.close': 'Close',
-            'footer.tagline': 'Premium barbershop experience in Chicago',
+            'tagline': 'Premium barbershop experience in Chicago',
             'footer.quickLinks': 'Quick Links',
-            'footer.rights': 'All rights reserved.'
+            'rights': 'All rights reserved.'
         };
 
         // Spanish translations
@@ -127,9 +127,9 @@ export class I18n {
             'booking.success.title': '¡Cita Reservada!',
             'booking.success.message': 'Tu cita ha sido reservada exitosamente. Recibirás un correo de confirmación en breve.',
             'booking.success.close': 'Cerrar',
-            'footer.tagline': 'Experiencia premium de barbería en Chicago',
+            'tagline': 'Experiencia premium de barbería en Chicago',
             'footer.quickLinks': 'Enlaces Rápidos',
-            'footer.rights': 'Todos los derechos reservados.'
+            'rights': 'Todos los derechos reservados.'
         };
     }
 
