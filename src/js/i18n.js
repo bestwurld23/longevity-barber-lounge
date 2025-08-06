@@ -152,6 +152,11 @@ export class I18n {
         if (currentLang) {
             currentLang.textContent = lang.toUpperCase();
         }
+        
+        // Dispatch custom event for other components
+        document.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: { language: lang }
+        }));
     }
 
     updateTranslations() {

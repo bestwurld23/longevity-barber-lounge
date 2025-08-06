@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #d4af37;
-    --accent-color: #8b7355;
+    --primary-color: #004687;
+    --secondary-color: #1a1a1a;
+    --accent-color: #c09853;
     --text-primary: #333333;
     --text-secondary: #666666;
     --text-light: #ffffff;
@@ -66,24 +66,24 @@ p {
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--text-light);
 }
 
 .btn-primary:hover {
-    background-color: #c19b26;
+    background-color: #003366;
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--text-light);
 }
 
@@ -116,8 +116,14 @@ p {
 
 .nav-brand h1 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 0;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -135,7 +141,7 @@ p {
 }
 
 .nav-menu a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .nav-menu a::after {
@@ -145,7 +151,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -171,7 +177,7 @@ p {
 }
 
 .lang-btn:hover {
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
 }
 
 .lang-dropdown {
@@ -241,7 +247,7 @@ p {
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
     line-height: 1.1;
 }
@@ -279,7 +285,7 @@ p {
 .services h2 {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .services p {
@@ -309,14 +315,14 @@ p {
 }
 
 .service-card h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .service-card .price {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -339,7 +345,7 @@ p {
 }
 
 .about-text h2 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
 
@@ -354,7 +360,7 @@ p {
 }
 
 .feature h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
@@ -381,7 +387,7 @@ p {
 .contact h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .contact-content {
@@ -396,7 +402,7 @@ p {
 }
 
 .contact-item h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -412,7 +418,7 @@ p {
 }
 
 .contact-item a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .hours-list {
@@ -481,7 +487,7 @@ p {
 
 .modal-header h2 {
     margin: 0;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .modal-close {
@@ -494,7 +500,7 @@ p {
 }
 
 .modal-close:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Form Styles */
@@ -528,8 +534,8 @@ p {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 70, 135, 0.1);
 }
 
 .form-actions {
@@ -569,7 +575,7 @@ p {
 }
 
 .success-content h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -579,7 +585,7 @@ p {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--text-light);
     padding: 50px 0 20px;
 }
@@ -592,7 +598,7 @@ p {
 }
 
 .footer-brand h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -602,7 +608,7 @@ p {
 
 .footer-links h4,
 .footer-contact h4 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -619,7 +625,7 @@ p {
 }
 
 .footer-links a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .footer-contact p {
@@ -634,7 +640,7 @@ p {
 }
 
 .footer-contact a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .footer-bottom {

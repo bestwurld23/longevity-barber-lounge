@@ -53,12 +53,6 @@ class LongevityBarberApp {
                 const lang = e.target.dataset.lang;
                 await this.i18n.setLanguage(lang);
                 langDropdown?.classList.remove('active');
-                
-                // Update current language display
-                const currentLang = document.getElementById('currentLang');
-                if (currentLang) {
-                    currentLang.textContent = lang.toUpperCase();
-                }
             });
         });
 
