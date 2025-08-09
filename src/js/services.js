@@ -70,7 +70,7 @@ export class ServicesManager {
                     en: 'Complete grooming package',
                     es: 'Paquete completo de arreglo personal'
                 },
-                price: 55,
+                price: 50,
                 duration: 75,
                 category: 'combo'
             },
