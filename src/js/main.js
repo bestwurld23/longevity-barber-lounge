@@ -35,20 +35,9 @@ class LongevityBarberApp {
     }
 
     setupEventListeners() {
-        // Donate button
-        const donateBtn = document.getElementById('donateBtn');
-        donateBtn?.addEventListener('click', () => {
-            // Add donate functionality here
-            alert('Donate functionality to be implemented');
-        });
-
-        // Hero booking button
-        const heroBookBtn = document.getElementById('heroBookBtn');
-        heroBookBtn?.addEventListener('click', () => {
-            button.addEventListener('click', () => {
-                this.bookingSystem.openModal();
-            });
-        });
+        // Smooth scrolling is now handled by CSS
+        // Booking buttons now use anchor links to #booking section
+        // Donate button links directly to PayPal
     }
 
     setupSmoothScrolling() {

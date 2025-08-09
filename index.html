@@ -15,10 +15,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <img src="src/images/longevity-logo.png" alt="Longevity Barber Lounge Logo" class="logo">
+                <img src="src/images/lgnvty.png" alt="Longevity Barber Lounge Logo" class="logo">
             </div>
             <div class="nav-actions">
-                <button class="btn-primary" id="donateBtn">Donate</button>
+                <a 
+                    class="btn btn-donate" 
+                    href="https://www.paypal.com/donate/?hosted_button_id=5DMVN4V3BNK64" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Donate
+                </a>
             </div>
         </div>
     </nav>
@@ -29,7 +36,7 @@
             <h1 data-i18n="heroTitle">Premium Barbershop Experience</h1>
             <p data-i18n="heroSubtitle">Expert cuts, traditional grooming, modern style. Located in the heart of Chicago.</p>
             <div class="hero-buttons">
-                <button class="btn-primary btn-large" id="heroBookBtn" data-i18n="heroBook">Book Appointment</button>
+                <a href="#booking" class="btn-primary btn-large" data-i18n="heroBook">Book Appointment</a>
                 <a href="#services" class="btn-secondary btn-large" data-i18n="services">View Services</a>
             </div>
         </div>
@@ -75,6 +82,82 @@
             <div id="servicesGrid" class="services-grid">
                 <!-- Services will be loaded dynamically -->
             </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Book Your Appointment</h2>
+            <form
+                name="barber-booking"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                class="netlify-booking-form"
+            >
+                <input type="hidden" name="form-name" value="barber-booking" />
+                <p class="hidden">
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-row">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="(###) ###-####" />
+                </div>
+
+                <div class="form-row">
+                    <label for="service">Service</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="classic_haircut">Classic Haircut - $35</option>
+                        <option value="beard_trim">Beard Trim & Shape - $25</option>
+                        <option value="hot_towel_shave">Hot Towel Shave - $40</option>
+                        <option value="haircut_beard_combo">Haircut + Beard Combo - $55</option>
+                        <option value="kids_cut">Kids Haircut - $25</option>
+                        <option value="senior_cut">Senior Haircut - $30</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="barber">Preferred Barber (optional)</label>
+                    <select id="barber" name="barber">
+                        <option value="">No preference</option>
+                        <option value="KC">KC</option>
+                        <option value="Any">Any available</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="date">Preferred Date</label>
+                    <input id="date" name="date" type="date" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="time">Preferred Time</label>
+                    <input id="time" name="time" type="time" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Booking</button>
+
+                <p class="success-message" hidden>Thank you! Your booking has been received.</p>
+                <p class="error-message" hidden>Something went wrong. Please try again.</p>
+            </form>
         </div>
     </section>
 
@@ -217,6 +300,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Set minimum date to tomorrow
+        (function() {
+            const dateInput = document.getElementById('date');
+            if (!dateInput) return;
+            const today = new Date();
+            const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+            dateInput.min = tomorrow.toISOString().split('T')[0];
+        })();
+
+        // Add smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
 
     <script type="module" src="src/js/main.js"></script>
 </body>
